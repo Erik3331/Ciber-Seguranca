@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança de Informação</title>
+</head>
+<body>
+    <header>
+        <img src="imgs/segurancao_informacao-removebg-preview.png" alt="Segurança de Informação">
+        <h1>Segurança de Informação</h1>
+        <button class="menu-button" onclick="toggleMenu()">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </button>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            var menuButton = document.querySelector('.menu-button');
+            menu.classList.toggle('hidden');
+            menuButton.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
