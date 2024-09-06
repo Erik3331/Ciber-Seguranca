@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/botao.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança de Informação</title>
+</head>
+<body>
+    <header>
+        <img src="imgs/segurancao_informacao-removebg-preview.png" alt="Segurança de Informação">
+        <h1>Segurança de Informação</h1>
+        <button class="menu-button" onclick="toggleMenu()">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </button>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <h2>Proteção Contra Ataques</h2>
+        <img src="imgs/protecao-atq.jpg" alt="">
+    </article>
+
+    <article>
+        <h2>Proteção de Dados</h2>
+        <img src="imgs/th.jpeg" alt="">
+    </article>
+
+    <article>
+        <h2>Controle de Acesso</h2>
+        <img src="" alt="">
+    </article>
+
+    <article>
+        <h2>Camadas de Segurança</h2>
+        <img src="" alt="">
+    </article>
+
+    <article class="notification">
+        <div class="notiglow"></div>
+          <div class="notiborderglow"></div>
+          <div class="notititle">Welcome To Uiverse</div>
+          <div class="notibody">Contribute to Open Source UI Elements</div>
+    </article>
+
+    <footer>
+        <h2>© - Byte Company LTDA; 2024</h2>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            var menuButton = document.querySelector('.menu-button');
+            menu.classList.toggle('hidden');
+            menuButton.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
