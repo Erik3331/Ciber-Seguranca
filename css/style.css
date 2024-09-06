@@ -64,6 +64,7 @@ header h1 {
 }
 
 nav {
+    font-size: 1.5rem;
     position: fixed; /* Muda para fixed para ficar fixo na tela */
     top: 0;
     left: 0; /* Posiciona o menu no lado esquerdo da tela */
@@ -96,6 +97,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #f0f0f0;
+    border-radius: 20px;
 }
 
 .hidden {
@@ -119,4 +121,12 @@ nav:not(.hidden) {
 
 .close-button:hover {
     color: #ff0000;
+}
+
+article{
+    margin: 5%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
 }
