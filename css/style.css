@@ -3,6 +3,10 @@ body {
     margin: 0;
     overflow-x: hidden; 
 }
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+}
 
 header {
     list-style: none;

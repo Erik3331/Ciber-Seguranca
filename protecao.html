@@ -43,7 +43,6 @@
 
     <article>
         <h2>Camadas de Segurança</h2>
-        <button onclick="navigateToLoadingPage()"> Testando</button>
         <img src="" alt="">
     </article>
 
@@ -59,20 +58,12 @@
     </footer>
 
     <script>
+        document.body.style.opacity = '1';
         function toggleMenu() {
             var menu = document.getElementById('menu');
             var menuButton = document.querySelector('.menu-button');
             menu.classList.toggle('hidden');
             menuButton.classList.toggle('active');
-        }
-        function navigateToLoadingPage() {
-            // Adiciona a classe 'fade-out' para iniciar a transição
-            document.body.classList.add('fade-out');
-            
-            // Aguarda a transição antes de redirecionar para a página de carregamento
-            setTimeout(function() {
-                window.location.href = 'loading.html';
-            }, 300); // Tempo da transição (1 segundo)
         }
     </script>
 </body>
