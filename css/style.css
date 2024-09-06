@@ -64,12 +64,8 @@ header h1 {
 }
 
 nav {
-<<<<<<< HEAD
     font-size: 1.5rem;
-    position: fixed; /* Muda para fixed para ficar fixo na tela */
-=======
-    position: fixed; 
->>>>>>> 1096b99d9e5abbcc7606f86fc939d6849027bd33
+    position: fixed;
     top: 0;
     left: 0; 
     width: 25%; 
@@ -128,9 +124,23 @@ nav:not(.hidden) {
 }
 
 article{
+    text-align: center;
     margin: 5%;
     background-color: #333;
     color: white;
     padding: 10px;
     border-radius: 20px;
+}
+
+article img{
+    margin-bottom: 20px;
+    border-radius: 20px ;
+  
+}
+
+footer{
+    text-align: center;
+    background-color: #333;
+    
+    
 }
