@@ -2,13 +2,7 @@ body {
   font-family: system-ui;
   margin: 0;
   overflow-x: hidden;
-  background-color: rgba(43, 131, 255, 0.731); /* cor de fundo provisoria */
-}
-
-
-body.fade-out {
-  opacity: 0;
-  transition: opacity 1s;
+  background: linear-gradient(to left, #0eb3ffea, #a600f9);
 }
 
 header {
@@ -25,6 +19,11 @@ header img {
   max-height: 50px;
 }
 
+header img:hover{
+  scale: 1.1;
+  transition: 50ms ease in ease-in-out;
+}
+
 header h1 {
   font-size: 1.5em;
   margin: 0;
@@ -36,7 +35,7 @@ header h1 {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: initial;
   align-items: center;
   width: 40px;
   height: 40px;
@@ -135,11 +134,19 @@ article {
   position: relative; /* Ensure position relative for the pseudo-element */
   text-align: center;
   background-color: #282828;
-  width: 65%;
-  margin: 50px auto 80px;
+  width: 40%;
+  margin: 70px auto 100px;
   padding: 10px;
   border-radius: 20px;
   overflow: hidden; /* Ensures content doesn't overflow the border */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+article:hover {
+  color: #ffffff;
+  background: linear-gradient(to left, #0eb3ffea, blue);
+  transform: scale(1.05); /* Slightly enlarge the article */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for elevation effect */
 }
 
 article::before {
@@ -150,21 +157,27 @@ article::before {
   width: 5px; 
   height: 100%;
   background: linear-gradient(to bottom, #0eb3ffea, #a600f9); /* Gradient color */
+  transition: background 0.3s ease; /* Smooth transition for pseudo-element */
+}
+
+article:hover::before {
+  background: linear-gradient(to bottom, #0eb3ffea, #00bfae); /* Change gradient color on hover */
 }
 
 article img {
-  width: 65%;
+  width: 70%;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for image */
 }
+
+article:hover img {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
 
 a{
   text-decoration: none;
-}
-
-a:hover{
-  opacity: 0.8;
-  transition: ease-in-out 90ms;
 }
 
 footer {
@@ -173,4 +186,21 @@ footer {
   color: #ffffffea;
   margin: 0;
   padding: 20px;
+}
+
+.title{
+  color: rgb(255, 255, 255);
+  width: 80%;
+  padding: 5px;
+  padding-left: 30px ;
+  border-radius: 0 20px 20px 0 ;
+  background-color: rgb(1, 23, 112);
+}
+
+main{
+  color: rgb(255, 255, 255);
+  margin: auto;
+  text-align: justify;
+  width: 80%;
+  font-weight:500 ;
 }
