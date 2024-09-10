@@ -1,132 +1,241 @@
 body {
-    font-family: system-ui;
-    margin: 0;
-    overflow-x: hidden; 
+  font-family: system-ui;
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to left, #0eb3ffea, #a600f9);
 }
 
 header {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: relative; 
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 
 header img {
-    max-height: 50px;
+  max-height: 50px;
+}
+
+header img:hover{
+  scale: 1.1;
+  transition: 50ms ease in ease-in-out;
 }
 
 header h1 {
-    font-size: 1.5em;
-    margin: 0;
+  font-size: 1.5em;
+  margin: 0;
 }
 
 .menu-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
 }
 
 .menu-button .bar {
-    background-color: #333;
-    height: 4px;
-    width: 100%;
-    margin: 4px 0;
-    transition: all 0.3s ease;
+  background-color: #333;
+  height: 4px;
+  width: 100%;
+  margin: 4px 0;
+  transition: all 0.3s ease;
 }
 
 .menu-button.active .bar1 {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .menu-button.active .bar2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .menu-button.active .bar3 {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 nav {
-    font-size: 1.5rem;
-    position: fixed; 
-    top: 0;
-    left: 0; 
-    width: 25%; 
-    height: 100vh; 
-    background-color: white;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-    transform: translateX(-100%); 
-    transition: transform 0.3s ease;
-    padding: 20px;
-    z-index: 1000; 
-    background-color: #0eb3ffea;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100vh;
+  background-color: #0eb3ffea;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px;
 }
 
 nav ul li a:hover {
-    background-color: #f0f0f0;
-    border-radius: 20px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  scale: 1.1;
+  transition: 60ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.50) 5px 2px 10px;
 }
 
 .hidden {
-    transform: translateX(-100%); 
+  transform: translateX(-100%);
 }
 
 nav:not(.hidden) {
-    transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .close-button {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: #333;
-    position: absolute;
-    top: 10px;
-    right: 10px; 
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #333;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
 .close-button:hover {
-    color: #ff0000;
+  color: #ff0000;
 }
 
-article{
-    margin: 5%;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
+article {
+  color: #0eb3ffea;
+  position: relative; /* Ensure position relative for the pseudo-element */
+  text-align: center;
+  background-color: #282828;
+  width: 40%;
+  margin: 70px auto 100px;
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden; /* Ensures content doesn't overflow the border */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+article:hover {
+  color: #ffffff;
+  background: linear-gradient(to left, #0eb3ffea, blue);
+  transform: scale(1.05); /* Slightly enlarge the article */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for elevation effect */
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px; 
+  height: 100%;
+  background: linear-gradient(to bottom, #0eb3ffea, #a600f9); /* Gradient color */
+  transition: background 0.3s ease; /* Smooth transition for pseudo-element */
+}
+
+article:hover::before {
+  background: linear-gradient(to bottom, #0eb3ffea, #00bfae); /* Change gradient color on hover */
+}
+
+article img {
+  width: 70%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+article:hover img {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+
+a{
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaçamento entre o texto e o ícone */
+  padding: 10px;
+  background-color: #333; /* Cor de fundo para contraste */
+  color: #fff; /* Cor do texto */
+}
+
+footer a {
+  color: #fff; /* Cor do ícone */
+  text-decoration: none;
+  scale: 1.2;
+}
+
+footer a:hover {
+  color: #e1306c; /* Cor do ícone ao passar o mouse */
+  scale: 1.4;
+  transition: 60ms ease-in-out;
+}
+
+footer img {
+  vertical-align: middle;
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  height: 30px; /* Ajuste o tamanho conforme necessário */
+}
+
+
+.title{
+  color: rgb(255, 255, 255);
+  width: 80%;
+  padding: 5px;
+  padding-left: 30px ;
+  border-radius: 0 20px 20px 0 ;
+  background-color: rgb(0, 75, 180);
+  box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.50);
+}
+
+main{
+  color: rgb(255, 255, 255);
+  margin: auto;
+  text-align: justify;
+  width: 70%;
+  font-weight:500 ;
+}
+
+main img {
+  display: block;
+  margin: 40px auto ;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: #282828 5px 5px 5px;
 }
