@@ -199,6 +199,7 @@ footer a {
   color: #fff; /* Cor do ícone */
   text-decoration: none;
   scale: 1.2;
+  padding: 10px;
 }
 
 footer a:hover {
